@@ -316,8 +316,6 @@ namespace CSVWorker
             }
         }
 
-       // public bool writeLog = true;
-
         public void StatusLine(string s1_2)
         {
             V8Data.StatusLine.SetStatusLine(s1_2);
@@ -417,11 +415,12 @@ namespace CSVWorker
             }
         }
 
+        #endregion
+
         public void EnableDebugMode(Boolean bDebugMode)
         {
             logFile.OnlyErrors = !bDebugMode;
         }
-        #endregion
 
         public Component() // Обязательно для COM инициализации
         {
@@ -430,8 +429,7 @@ namespace CSVWorker
             AddInName = "ExtVK";
 
             name_s[] p = {
-                            new name_s("Version",  "Версия"),
-                            new name_s("WriteLog", "ЗаписыватьЛог")
+                            new name_s("Version",  "Версия")
             };
 
             name_s[] m = {
